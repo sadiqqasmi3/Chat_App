@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="73" id="KGk-i7-Jjw" customClass="MessageViewCell" customModule="Chat_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="293" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="293" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kp4-9y-bgr">
+                        <rect key="frame" x="10" y="10" width="273" height="53"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IZF-K7-XaG">
+                                <rect key="frame" x="0.0" y="0.5" width="40" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MjV-Gm-eDd"/>
+                                    <constraint firstAttribute="width" constant="40" id="Up8-Cq-i7c"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ovy-gK-3sF">
+                                <rect key="frame" x="50" y="0.0" width="173" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ndkwnkdn" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFT-vy-Lie">
+                                        <rect key="frame" x="10" y="10" width="153" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstItem="XFT-vy-Lie" firstAttribute="leading" secondItem="Ovy-gK-3sF" secondAttribute="leading" constant="10" id="924-0G-otq"/>
+                                    <constraint firstAttribute="bottom" secondItem="XFT-vy-Lie" secondAttribute="bottom" constant="10" id="A8p-bR-y4Q"/>
+                                    <constraint firstItem="XFT-vy-Lie" firstAttribute="top" secondItem="Ovy-gK-3sF" secondAttribute="top" constant="10" id="MBs-cj-Sy6"/>
+                                    <constraint firstAttribute="trailing" secondItem="XFT-vy-Lie" secondAttribute="trailing" constant="10" id="jsF-iI-zrs"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="y.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Rk-RZ-wZR">
+                                <rect key="frame" x="233" y="0.5" width="40" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="HCO-1D-yTk"/>
+                                    <constraint firstAttribute="height" constant="40" id="JXg-lC-n0a"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ovy-gK-3sF" firstAttribute="top" secondItem="kp4-9y-bgr" secondAttribute="top" constant="10" id="PTZ-hs-wnO"/>
+                            <constraint firstAttribute="bottom" secondItem="Ovy-gK-3sF" secondAttribute="bottom" constant="10" id="Xo9-AK-t6Z"/>
+                            <constraint firstItem="5Rk-RZ-wZR" firstAttribute="leading" secondItem="Ovy-gK-3sF" secondAttribute="trailing" constant="10" id="eZA-lW-CTq"/>
+                            <constraint firstItem="Ovy-gK-3sF" firstAttribute="leading" secondItem="IZF-K7-XaG" secondAttribute="trailing" constant="10" id="lw6-xr-yyp"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="kp4-9y-bgr" secondAttribute="trailing" constant="10" id="Cz1-TL-VH7"/>
+                    <constraint firstAttribute="bottom" secondItem="kp4-9y-bgr" secondAttribute="bottom" constant="10" id="E96-O1-tpu"/>
+                    <constraint firstItem="kp4-9y-bgr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="cXw-Bb-Vyb"/>
+                    <constraint firstItem="kp4-9y-bgr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="zsq-Yz-B4T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="meAvatar" destination="IZF-K7-XaG" id="cS9-y5-di7"/>
+                <outlet property="messageBubble" destination="Ovy-gK-3sF" id="TfM-ul-g3G"/>
+                <outlet property="messageLabel" destination="XFT-vy-Lie" id="TRl-ls-c3a"/>
+                <outlet property="youAvatar" destination="5Rk-RZ-wZR" id="cJa-QW-Jwi"/>
+            </connections>
+            <point key="canvasLocation" x="158.69565217391306" y="58.59375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="m.circle" catalog="system" width="128" height="121"/>
+        <image name="y.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

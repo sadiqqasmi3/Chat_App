@@ -7,23 +7,45 @@
 
 import UIKit
 
+
 class ChatViewController: UIViewController {
 
+    @IBOutlet weak var typeMessageTextField: UITextField!
+    @IBOutlet weak var messageTable: UITableView!
+    let messages = [Message(senderName: "me", message: "hi"),
+                    Message(senderName: "me", message: "hello"),
+                    Message(senderName: "me", message: "testing cjkndskjcnkdsn cbkjdsckjsdnc udhskchsuidkc buihsdcknka"),
+                    Message(senderName: "me", message: "testing 1")]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        messageTable.dataSource = self
+        messageTable.register(UINib(nibName: K.nibName , bundle: nil) , forCellReuseIdentifier: K.cellIdentifier)
+    }
+    @IBAction func sendButtton(_ sender: UIButton) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func LogoutButton(_ sender: UIBarButtonItem) {
     }
-    */
 
 }
+ 
+extension ChatViewController:UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = messageTable.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageViewCell
+        cell.messageLabel.text = messages[indexPath.row].message
+        return cell
+        
+        
+        
+    }
+    
+    
+}
+
